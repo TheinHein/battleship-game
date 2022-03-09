@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Russo+One&family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <title>Battleship</title>
+  </head>
+  <body>
+    <nav><h1 class="title">Battleship</h1></nav>
+    <main class="display">
+      <div class="peek"></div>
+      <div class="board-container"></div>
+      <div>
+        <div class="ships-status-container"></div>
+      </div>
+      <div>
+        <button class="pass">Done</button>
+      </div>
+    </main>
+    <section class="pre-game-container">
+      <div class="title">
+        <h3>Ships Placement Dialog</h3>
+      </div>
+      <div class="preview-container"></div>
+      <div class="ships-container">
+        <div class="info">
+          <p>DRAG the ship and DROP it onto the game board to place it.</p>
+          <p>Double-click on the ship to change its direction.</p>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="reset">Reset</button>
+        <button class="randomize">Randomize</button>
+        <button class="start">Start Game</button>
+      </div>
+    </section>
+    <section class="notification-container"></section>
+    <footer class="footer"></footer>
+  </body>
+  <script src="main.js"></script>
+</html>
