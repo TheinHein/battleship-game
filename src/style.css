@@ -1,0 +1,322 @@
+body {
+  font-family: "Orbitron", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: aquamarine;
+  touch-action: none;
+}
+
+nav {
+  height: 5%;
+  background-color: rgb(138, 138, 255);
+}
+
+nav h1 {
+  margin: 0;
+  padding: 5px;
+  padding-left: 10px;
+  text-transform: uppercase;
+}
+
+.title {
+  color: aquamarine;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  gap: 20px;
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
+.game-board {
+  border-collapse: collapse;
+}
+
+.game-board th {
+  border: 1px solid black;
+  width: 27px;
+  height: 27px;
+  background-color: white;
+}
+
+.game-board td {
+  width: 27px;
+  height: 27px;
+  background-color: rgb(19, 167, 187);
+  border: 1px solid black;
+}
+
+.game-board thead tr :first-child {
+  border: none;
+}
+
+.game-board tbody tr :last-child {
+  border-right: 3px solid black;
+}
+
+.game-board table :last-child {
+  border-bottom: 3px solid black;
+}
+
+.game-board tbody tr :nth-child(2) {
+  border-left: 3px solid black;
+}
+
+.game-board tbody > :first-child td {
+  border-top: 3px solid black;
+}
+
+.game-board tbody > :last-child td {
+  border-bottom: 3px solid black;
+}
+
+.game-board .hasShip-x {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  background-color: rgb(138, 138, 255);
+}
+
+.game-board .hasShip-y {
+  border-right: 3px solid black;
+  border-left: 3px solid black;
+  background-color: rgb(138, 138, 255);
+}
+
+.game-board .ship-front-x {
+  border-left: 3px solid black;
+}
+
+.game-board .ship-end-x {
+  border-right: 3px solid black;
+}
+
+.game-board .ship-front-y {
+  border-top: 3px solid black;
+}
+
+.game-board .ship-end-y {
+  border-bottom: 3px solid black;
+}
+
+.game-board .isHit {
+  background-color: red;
+}
+
+.game-board .isMissed {
+  background-color: rgb(153, 165, 42);
+}
+
+.pre-game-container {
+  width: 350px;
+  height: 700px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(134, 198, 235);
+}
+
+.pre-game-container .title {
+  width: 100%;
+  height: 30px;
+  background-color: rgb(138, 138, 255);
+}
+
+.pre-game-container .title h3 {
+  margin: 0;
+  margin-left: 5px;
+  line-height: 30px;
+}
+
+.preview-container {
+  width: 90%;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pre-game-container .buttons {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(138, 138, 255);
+}
+
+button {
+  height: 30px;
+  font-family: "Orbitron", sans-serif;
+  border-radius: 10px;
+  background-color: rgb(19, 167, 187);
+  cursor: pointer;
+}
+
+.human-section,
+.computer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.human-ships-status-container,
+.computer-ships-status-container {
+  border: 1px solid black;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.ships-container {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(247, 247, 247);
+  cursor: grab;
+}
+
+.info {
+  text-align: center;
+  font-size: 0.8em;
+  height: fit-content;
+  background-color: aqua;
+}
+
+.info p {
+  margin: 0;
+  border-bottom: 1px solid black;
+  padding: 5px 0;
+}
+
+.shipContainer {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  border: 3px solid black;
+}
+
+.shipSec {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  background-color: rgb(138, 138, 255);
+}
+
+.shipContainer[data-dir="X"] {
+  flex-direction: row;
+}
+
+.shipContainer[data-dir="Y"] {
+  flex-direction: column;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.notification {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  gap: 20px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: enlarge 300ms ease-in-out forwards;
+}
+
+.ship {
+  border-collapse: collapse;
+  margin: 2px;
+}
+
+.ship td {
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+}
+
+.ship .sunk {
+  background-color: red;
+}
+
+.footer {
+  height: 5%;
+  background-color: black;
+}
+
+.peek .game-board {
+  transform: scale(0.6);
+  margin-bottom: -40px;
+}
+
+.board-container .game-board {
+  margin-top: -40px;
+  margin-bottom: -10px;
+}
+
+.zoom-in {
+  animation: zoomIn 300ms ease-in-out forwards;
+  z-index: 30;
+}
+
+.zoom-out {
+  animation: zoomOut 300ms ease-in-out forwards;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.6);
+  }
+}
+
+@keyframes enlarge {
+  0% {
+    width: 125px;
+    height: 150px;
+    font-size: 1em;
+    opacity: 0;
+  }
+  100% {
+    width: 350px;
+    height: 700px;
+    font-size: 2em;
+    opacity: 1;
+  }
+}
+
+.pass {
+  visibility: hidden;
+}
