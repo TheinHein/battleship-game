@@ -6,7 +6,7 @@
 ## Description
 - This project is part of The Odin Project Self-learning Javascript Curriculum. 
 - The main purpose of the project is to practice the basics of unit testing using Jest.
-- During building this project, I have gain more practical knowledges about OOP and some design patterns by implementing publisher/subscriber pattern to control the game while manipulating the DOM.
+- During building this project, I have gained more practical knowledges about OOP and some design patterns by implementing publisher/subscriber pattern to control the game while manipulating the DOM.
 
 - Some of the challenges, aside from learning Jest, included DOM manipulation, drag and drop ability to place ships onto the board, and making the game mobile-friendly.
 
